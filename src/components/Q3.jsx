@@ -21,4 +21,4 @@ const Dropdown = () => {
 
 <Hippopotamus />
 
-<p>superhero</p>
+<p>superhero superhero</p>
