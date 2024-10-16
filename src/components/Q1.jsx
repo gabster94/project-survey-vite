@@ -7,21 +7,21 @@ import { useState } from "react";
  * This file is intended to help students understand how to pass down state and functions in React, while keeping the input's state in sync.
  */
 
-export const Name = ({ value, updateFormData }) => {
+export const SuperheroName = ({ value, updateFormData }) => {
   // Function to handle user input and update the form's name field
-  const handleNameChange = (e) => {
+  const handleSuperheroNameChange = (e) => {
     // Call updateFormData to update the "name" field with the input's current value
-    updateFormData("name", e.target.value);
+    updateFormData("superheroName", e.target.value);
   };
 
   return (
-    <div className="border-box">
+    <div>
       {/* Label for the name input field */}
-      <label>Name:</label>
+      <label>What would your superhero name be?</label>
 
       {/* Input field to capture the user's name, with the value controlled by the "value" prop */}
       {/* The onChange event triggers the handleNameChange function to update the form data */}
-      <input type="text" value={value} onChange={handleNameChange} />
+      <input type="text" value={value} onChange={handleSuperheroNameChange} />
     </div>
   );
 };
