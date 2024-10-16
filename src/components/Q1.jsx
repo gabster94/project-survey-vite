@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 /**
  * This component is used to collect and update the user's name in a multi-step form.
  * It demonstrates how to handle form inputs in React using the useState hook indirectly (from a parent component).
@@ -7,11 +5,11 @@ import { useState } from "react";
  * This file is intended to help students understand how to pass down state and functions in React, while keeping the input's state in sync.
  */
 
-export const SuperheroName = ({ value, updateFormData }) => {
+export const Name = ({ value, updateFormData }) => {
   // Function to handle user input and update the form's name field
-  const handleSuperheroNameChange = (e) => {
+  const handleNameChange = (e) => {
     // Call updateFormData to update the "name" field with the input's current value
-    updateFormData("superheroName", e.target.value);
+    updateFormData("name", e.target.value);
   };
 
   return (
@@ -21,7 +19,7 @@ export const SuperheroName = ({ value, updateFormData }) => {
 
       {/* Input field to capture the user's name, with the value controlled by the "value" prop */}
       {/* The onChange event triggers the handleNameChange function to update the form data */}
-      <input type="text" value={value} onChange={handleSuperheroNameChange} />
+      <input type="text" value={value} onChange={handleNameChange} />
     </div>
   );
 };
