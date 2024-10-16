@@ -18,3 +18,5 @@ const Dropdown = () => {
 // Glitter and spandex
 // Rubber and feathers
 // Cardboard and duct tape
+
+<Hippopotamus />
