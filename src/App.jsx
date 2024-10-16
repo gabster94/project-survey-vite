@@ -1,5 +1,6 @@
-// import React from "react";
-// import { Header } from "./components/Header.jsx"
+
+
+import { Header } from "./components/Header.jsx"
 // import { Submit } from "./components/Submit.jsx"
 
 
@@ -9,13 +10,6 @@
 //   return (
 //     <div>
 //       <Header />
-//       <Submit /> 
-//       {/* <form>
-//         <Q1 />
-//         <Q2 />
-//         <Q3 />
-        
-//       </form>*/}
 //     </div>
 //   )
 // };
