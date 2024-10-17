@@ -17,7 +17,7 @@ export const Name = ({ value, updateFormData }) => {
 
 
 // props validation
-Name.PropTypes = {
+Name.propTypes = {
   value: PropTypes.string.isRequired,
   updateFormData: PropTypes.func.isRequired,
 }
