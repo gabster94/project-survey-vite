@@ -1,0 +1,9 @@
+.name-form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.label-text-name {
+    color: #fcffca;
+}

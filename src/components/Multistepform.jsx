@@ -89,7 +89,7 @@ export const MultiStepForm = () => {
       {formSubmitted ? (
         <h2>Thanks for Voting!</h2>
       ) : (
-        <h2>SUPERHERO</h2>
+        <p>Hallo!</p>
       )}
 
       {/* Render the Name component on step 1 */}
@@ -109,10 +109,10 @@ export const MultiStepForm = () => {
       {!formSubmitted && (
         <div>
           {/* Show "Back" button if not on the first step */}
-          {currentStep > 1 && <button onClick={prevStep}>Back</button>}
+          {currentStep > 1 && <button className="button" onClick={prevStep}>Back</button>}
           {/* Show "Next" button or "Submit" button depending on the step */}
           {currentStep < 3 ? (
-            <button onClick={nextStep}>Next</button>
+            <button className="button" onClick={nextStep}>Next</button>
           ) : (
             <button onClick={submitForm}>Submit Form</button>
           )}

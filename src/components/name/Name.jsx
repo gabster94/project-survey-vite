@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import "./name.css"
 
 
+
 // function in which users can write their favourite superhero name
 
 export const Name = ({ value, updateFormData }) => {
@@ -10,10 +11,15 @@ export const Name = ({ value, updateFormData }) => {
   };
 
   return (
-    <div>
-      <label>What would your superhero name be?</label>
-      <input type="text" value={value} onChange={handleNameChange} />
-    </div>
+    <>
+      <div className="name-form-container">
+        <label className="label-text-name">What would your superhero name be?</label>
+        <input type="text" value={value} onChange={handleNameChange} />
+
+      </div>
+
+
+    </>
   );
 };
 

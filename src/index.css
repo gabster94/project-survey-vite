@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  background-color: #261b28;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: #fcffca;
+}
+
+h2 {
+  color: #fcffca;
+}
+
+p {
+  color: #50f0ff;
+}
+
+.button {
+  background-color: #50f0ff;
+}
+
+.button:hover {
+  background-color: #fcffca;
+  cursor: pointer;
+}
