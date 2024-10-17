@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Name } from "./Q1.jsx";
-import { Costume } from "./Q3.jsx";
-import { SuperheroStrength } from "./Q2.jsx";
+import { Name } from "./Name.jsx";
+import { Costume } from "./Costume.jsx";
+import { SuperheroStrength } from "./Strength.jsx";
 
 // Component: MultiStepForm
 export const MultiStepForm = () => {
@@ -50,13 +50,7 @@ export const MultiStepForm = () => {
     }
   };
 
-  // ---
-  // ---
 
-  // Function to move back to the previous step in the form
-  // "If the currentStep is greater than 1, meaning we're not on the first step,
-  // go ahead and set the currentStep to one step less than what it is now.
-  // Basically, subtract 1 from currentStep, so we move back one step."
 
   const prevStep = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
