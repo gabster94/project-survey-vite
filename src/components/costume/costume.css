@@ -1,4 +1,9 @@
 .form-container-costume {
-    background-color: green;
-    color: gold;
+    display: flex;
+    flex-direction: column;
+    color: aqua;
+}
+
+.label-costume {
+    padding: 10px;
 }

@@ -11,9 +11,9 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
         updateFormData("strength", selectedStrength); // Update parent state
     };
     return (
-        <form>
+        <form className="form-strength">
             Superhero Strength: What kind of strength would you like to have?
-            <label>
+            <label className="label-strength">
                 <input
                     type="radio"
                     value="Superhuman Strength"
@@ -22,7 +22,7 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
                 />
                 Superhuman Strength
             </label>
-            <label>
+            <label className="label-strength">
                 <input
                     type="radio"
                     value="Telekinesis"

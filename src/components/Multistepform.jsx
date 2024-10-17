@@ -114,7 +114,7 @@ export const MultiStepForm = () => {
           {currentStep < 3 ? (
             <button className="button" onClick={nextStep}>Next</button>
           ) : (
-            <button onClick={submitForm}>Submit Form</button>
+            <button className="button" onClick={submitForm}>Submit Form</button>
           )}
         </div>
       )}
@@ -127,7 +127,7 @@ export const MultiStepForm = () => {
           <p>Costume: {formData.costume}</p>
           <p>Superhero Strength: {formData.strength}</p>
           {/* Button to reset the form and start over */}
-          <button onClick={startOver}>Start Over</button>
+          <button className="button" onClick={startOver}>Start Over</button>
         </div>
       )}
     </div>

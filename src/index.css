@@ -38,6 +38,8 @@ p {
 
 .button {
   background-color: #50f0ff;
+  padding: 3px;
+  margin: 10px;
 }
 
 .button:hover {
