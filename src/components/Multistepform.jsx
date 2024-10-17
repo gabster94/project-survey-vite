@@ -8,7 +8,7 @@ export const MultiStepForm = () => {
   // State to store form data for each field (name, age, email, favorite band, album, artist)
   const [formData, setFormData] = useState({
     name: "",
-    favoriteCostume: "",
+    costume: "",
     strength: "",
   });
 
@@ -26,7 +26,7 @@ export const MultiStepForm = () => {
 
   // Function to move to the next step in the form, with validation at each step
   const nextStep = () => {
-    if (currentStep < 4) {
+    if (currentStep <= 3) {
       // Validate the current step's data before proceeding
       switch (currentStep) {
         case 1:
@@ -38,14 +38,15 @@ export const MultiStepForm = () => {
           // If the costume field is not empty, go to the next step, otherwise show an alert
           if (formData.costume.trim() !== "") setCurrentStep(currentStep + 1);
           else alert("Please select your favorite costume");
-          break;
-        case 3:
-          if (formData.strength.trim() !== "") setCurrentStep(currentStep + 1);
-          else alert("Please select your favorite costume");
+        //   break;
+        // case 3:
+        //   if (formData.strength.trim() !== "") {
+        //     alert("Please select your superhero strength");
+        //   }
           break;
         default:
           // if none of the above, proceed to the next step automatically
-          setCurrentStep(currentStep + 1)
+          // setCurrentStep(currentStep + 1)
       }
     }
   };
@@ -58,6 +59,13 @@ export const MultiStepForm = () => {
 
   // Function to submit the form, log the form data, and display it
   const submitForm = () => {
+    // Validate the strength field before submission
+    if (formData.strength.trim() === "") {
+      alert("Please select your superhero strength");
+      return; // Stop form submission if validation fails
+    }
+
+     // If validation passes, proceed with form submission
     console.log(formData);
     setFormSubmitted(true); // Set form as submitted
     // Format the form data for displaying in the alert
@@ -100,11 +108,13 @@ export const MultiStepForm = () => {
       {currentStep === 2 && (
         <Costume value={formData.costume} updateFormData={updateFormData} />
       )}
-      {/* Render the radiobutton component on step 2 */}
+      {/* Render the radiobutton component on step 3 */}
       {currentStep === 3 && (
-        <SuperheroStrength value={formData.strength} updateFormData={updateFormData} />
+        <SuperheroStrength 
+          value={formData.strength} 
+          updateFormData={updateFormData} 
+        />
       )}
-
       {/* Navigation buttons for moving between steps */}
       {!formSubmitted && (
         <div>
@@ -124,7 +134,7 @@ export const MultiStepForm = () => {
         <div>
           <h3>Voting Information</h3>
           <p>Name: {formData.name}</p>
-          <p>Costume: {formData.costume}</p>
+          <p>Favorite Costume: {formData.costume}</p>
           <p>Superhero Strength: {formData.strength}</p>
           {/* Button to reset the form and start over */}
           <button className="button" onClick={startOver}>Start Over</button>
@@ -132,5 +142,4 @@ export const MultiStepForm = () => {
       )}
     </div>
   );
-
-}
+};

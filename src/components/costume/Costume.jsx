@@ -3,7 +3,7 @@ import "./costume.css"
 
 // User can select favourite costume
 
-export const Costume = ({ updateFormData, value }) => {
+export const Costume = ({ value, updateFormData }) => {
     const handleCostumeChange = (e) => {
         updateFormData("costume", e.target.value);
     };
