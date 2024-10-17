@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import "./name.css"
+
 
 // function in which users can write their favourite superhero name
 
