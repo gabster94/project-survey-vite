@@ -2,9 +2,18 @@
     display: flex;
     flex-direction: column;
     margin: 5px;
+    max-width: 600px;
+
 }
 
 .label-text-name {
-    color: #fcffca;
+    color: #50bfff;
     padding: 10px;
+}
+
+.name-input {
+    margin: 20px;
+    min-height: 20px;
+    max-width: 40%;
+    ;
 }
