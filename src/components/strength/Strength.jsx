@@ -1,6 +1,7 @@
 // RadioButtons to select a superhero strength
 import { useState } from "react";
 import PropTypes from "prop-types";
+import "./strength.css"
 
 export const SuperheroStrength = ({ updateFormData, value }) => {
     const [strength, setStrength] = useState(value)

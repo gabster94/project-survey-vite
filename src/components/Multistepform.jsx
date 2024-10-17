@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Name } from "./name/Name.jsx";
 import { Costume } from "./costume/Costume.jsx";
-import { SuperheroStrength } from "./Strength.jsx";
+import { SuperheroStrength } from "./strength/Strength.jsx";
 
 // Component: MultiStepForm
 export const MultiStepForm = () => {
