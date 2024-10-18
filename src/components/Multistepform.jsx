@@ -100,11 +100,17 @@ export const MultiStepForm = () => {
 
       {/* Render the Name component on step 1 */}
       {currentStep === 1 && (
-        <Name value={formData.name} updateFormData={updateFormData} />
+        <Name 
+          value={formData.name} 
+          updateFormData={updateFormData} 
+        />
       )}
       {/* Render the Costume component on step 2 */}
       {currentStep === 2 && (
-        <Costume value={formData.costume} updateFormData={updateFormData} />
+        <Costume 
+          value={formData.costume} 
+          updateFormData={updateFormData} 
+        />
       )}
       {/* Render the radiobutton component on step 3*/}
       {!formSubmitted && currentStep === 3 && (
@@ -116,14 +122,14 @@ export const MultiStepForm = () => {
 
       {/* Navigation buttons for moving between steps */}
       {!formSubmitted && (
-        <div>
+        <div className="nav-buttons">
           {/* Show "Back" button if not on the first step */}
-          {currentStep > 1 && <button className="button" onClick={prevStep}>Back</button>}
+          {currentStep > 1 && <button aria-label="go to the previous step" className="button" onClick={prevStep}>Back</button>}
           {/* Show "Next" button or "Submit" button depending on the step */}
           {currentStep < 3 ? (
-            <button className="button" onClick={nextStep}>Next</button>
+            <button aria-label="go to the next step" className="button" onClick={nextStep}>Next</button>
           ) : (
-            <button className="button" onClick={submitForm}>Submit Form</button>
+            <button aria-label="submit your anwers" className="button" onClick={submitForm}>Submit Form</button>
           )}
         </div>
       )}
@@ -134,9 +140,10 @@ export const MultiStepForm = () => {
           <h3>All Set! Now, Dream of Your Heroic Adventures</h3>
           <p>Congratulations, you are officially the superheroe {formData.name} – fully equipped with a {formData.costume} costume, and the {formData.strength} superpower!</p>
           <p>Now close your eyes, drift off, and let the dreams of superpower shenanigans begin. 💤 Sweet dreams, hero! 🌟</p>
-
-          {/* Button to reset the form and start over */}
-          <button className="button" onClick={startOver}>Start Over</button>
+          <div className="nav-buttons">
+            {/* Button to reset the form and start over */}
+            <button aria-label="restart the questionaire" className="button" onClick={startOver}>Start Over</button>
+          </div>
         </div>
       )}
     </div>
