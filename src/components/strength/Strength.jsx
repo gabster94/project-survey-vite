@@ -14,7 +14,7 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
         <form className="form-strength">
             What’s a superhero without an epic superpower? 💥 It is your choice:
             <label className="label-strength">
-                <input 
+                <input
                     type="radio"
                     value="Superhuman Strength"
                     onChange={handleStrengthChange}
@@ -30,6 +30,15 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
                     checked={strength === "Telekinesis"}
                 />
                 Telekinesis
+            </label>
+            <label className="label-strength">
+                <input
+                    type="radio"
+                    value="Time Manipulation"
+                    onChange={handleStrengthChange}
+                    checked={strength === "Time Manipulation"}
+                />
+                Time Manipulation
             </label>
         </form>
     )
