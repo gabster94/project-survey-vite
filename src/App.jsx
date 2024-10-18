@@ -3,8 +3,7 @@ import { useState } from "react";
 import { Header } from "./components/Header.jsx"
 import { MultiStepForm } from "./components/Multistepform.jsx";
 import { Welcome } from "./components/welcome/Welcome.jsx";
-
-
+import { Footer } from "./components/Footer.jsx";
 
 export const App = () => {
     const [showForm, setShowForm] = useState(false)
@@ -25,6 +24,7 @@ export const App = () => {
             ) : (
                 <MultiStepForm />
             )}
+            <Footer />
         </div>
     )
 }

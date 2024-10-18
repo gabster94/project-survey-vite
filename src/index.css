@@ -15,10 +15,10 @@ code {
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 5px;
   background-color: #261b28;
   max-width: 100%;
+  height: 100%;
   background-image: url(./assets/shooting-star-2024127_1280.png);
 }
 
@@ -32,30 +32,30 @@ header {
   padding: 10px;
 }
 
-h1 {
-  color: #fcffca;
-}
-
-h2 {
-  color: #fcffca;
-}
-
-h3 {
-  color: #fcffca;
-}
-
+/* texts */
+h1,
+h2,
+h3,
 p {
   color: #fcffca;
+  text-align: center;
 }
 
+.text-conclusion {
+  color: aqua;
+}
+
+/* buttons */
 .nav-buttons {
   display: flex;
   justify-content: center;
+  border: none;
 
 }
 
 .button {
   background-color: #50bfff;
+  font-size: 20px;
   padding: 20px;
   margin: 10px;
   width: 40%;
@@ -64,7 +64,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  border: none;
 }
 
 .button:hover {
@@ -76,7 +76,6 @@ p {
   display: flex;
   flex-direction: column;
   max-width: 800px;
-  border: solid, #50bfff;
   border-radius: 10px;
   padding: 2%;
   margin: 10px;
@@ -87,4 +86,13 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.text-footer {
+  font-size: 12px;
+}
+
+.welcome-container {
+  min-height: 30vh;
+  max-width: 60%;
 }
