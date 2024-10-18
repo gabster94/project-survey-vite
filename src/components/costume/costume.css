@@ -7,3 +7,9 @@
 .label-costume {
     padding: 10px;
 }
+
+.costume-input {
+    margin: 20px;
+    min-height: 30px;
+    max-width: 80%;
+}

@@ -14,7 +14,7 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
         <form className="form-strength">
             What’s a superhero without an epic superpower? 💥 It is your choice:
             <label className="label-strength">
-                <input
+                <input 
                     type="radio"
                     value="Superhuman Strength"
                     onChange={handleStrengthChange}

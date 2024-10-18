@@ -48,12 +48,23 @@ p {
   color: #fcffca;
 }
 
+.nav-buttons {
+  display: flex;
+  justify-content: center;
+
+}
+
 .button {
   background-color: #50bfff;
-  padding: 3px;
+  padding: 20px;
   margin: 10px;
   width: 40%;
   height: 30px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
 .button:hover {

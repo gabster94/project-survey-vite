@@ -18,7 +18,7 @@ export const App = () => {
             {!showForm ? (
                 <>
                     <Welcome />
-                    <button className="button" onClick={startForm}>
+                    <button aria-label="Start the questionaire" className="button" onClick={startForm}>
                         Start
                     </button>
                 </>
