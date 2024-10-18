@@ -18,7 +18,7 @@ body {
   justify-content: center;
   padding: 5px;
   background-color: #261b28;
-  width: 100%;
+  max-width: 100%;
   background-image: url(./assets/shooting-star-2024127_1280.png);
 }
 
