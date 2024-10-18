@@ -3,9 +3,11 @@ import { Name } from "./name/Name.jsx";
 import { Costume } from "./costume/Costume.jsx";
 import { SuperheroStrength } from "./strength/Strength.jsx";
 
+
+
 // Component: MultiStepForm
 export const MultiStepForm = () => {
-  // State to store form data for each field (name, age, email, favorite band, album, artist)
+
   const [formData, setFormData] = useState({
     name: "",
     costume: "",
@@ -15,7 +17,6 @@ export const MultiStepForm = () => {
   // State to track whether the form has been submitted
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  // State to track the current step (1 through 2?)
   const [currentStep, setCurrentStep] = useState(1);
 
   // Function to update form data based on the provided field (key) and value
@@ -26,7 +27,7 @@ export const MultiStepForm = () => {
 
   // Function to move to the next step in the form, with validation at each step
   const nextStep = () => {
-    if (currentStep <= 3) {
+    if (currentStep < 3) {
       // Validate the current step's data before proceeding
       switch (currentStep) {
         case 1:
@@ -38,20 +39,17 @@ export const MultiStepForm = () => {
           // If the costume field is not empty, go to the next step, otherwise show an alert
           if (formData.costume.trim() !== "") setCurrentStep(currentStep + 1);
           else alert("Please select your favorite costume");
-        //   break;
-        // case 3:
-        //   if (formData.strength.trim() !== "") {
-        //     alert("Please select your superhero strength");
-        //   }
+          break;
+        case 3:
+          if (formData.strength.trim() !== "") setCurrentStep(currentStep + 1);
+          else alert("Please select your superhero strength");
           break;
         default:
           // if none of the above, proceed to the next step automatically
-          // setCurrentStep(currentStep + 1)
+          setCurrentStep(currentStep + 1)
       }
     }
   };
-
-
 
   const prevStep = () => {
     if (currentStep > 1) setCurrentStep(currentStep - 1);
@@ -60,12 +58,12 @@ export const MultiStepForm = () => {
   // Function to submit the form, log the form data, and display it
   const submitForm = () => {
     // Validate the strength field before submission
-    if (formData.strength.trim() === "") {
-      alert("Please select your superhero strength");
-      return; // Stop form submission if validation fails
-    }
+    // if (formData.strength.trim() === "") {
+    //   alert("Please select your superhero strength");
+    //   return; 
+    // }
 
-     // If validation passes, proceed with form submission
+    // If validation passes, proceed with form submission
     console.log(formData);
     setFormSubmitted(true); // Set form as submitted
     // Format the form data for displaying in the alert
@@ -93,7 +91,7 @@ export const MultiStepForm = () => {
   };
 
   return (
-    <div>
+    <div className="multistep-form-container">
       {formSubmitted ? (
         <h2>Thanks for Voting!</h2>
       ) : (
@@ -114,13 +112,14 @@ export const MultiStepForm = () => {
           updateFormData={updateFormData} 
         />
       )}
-      {/* Render the radiobutton component on step 3 */}
-      {currentStep === 3 && (
-        <SuperheroStrength 
-          value={formData.strength} 
-          updateFormData={updateFormData} 
+      {/* Render the radiobutton component on step 3*/}
+      {!formSubmitted && currentStep === 3 && (
+        <SuperheroStrength
+          value={formData.strength}
+          updateFormData={updateFormData}
         />
       )}
+
       {/* Navigation buttons for moving between steps */}
       {!formSubmitted && (
         <div>
@@ -138,10 +137,10 @@ export const MultiStepForm = () => {
       {/* Display the form data after submission */}
       {formSubmitted && (
         <div>
-          <h3>Voting Information</h3>
-          <p>Name: {formData.name}</p>
-          <p>Favorite Costume: {formData.costume}</p>
-          <p>Superhero Strength: {formData.strength}</p>
+          <h3>All Set! Now, Dream of Your Heroic Adventures</h3>
+          <p>Congratulations, you are officially the superheroe {formData.name} – fully equipped with a {formData.costume} costume, and the {formData.strength} superpower!</p>
+          <p>Now close your eyes, drift off, and let the dreams of superpower shenanigans begin. 💤 Sweet dreams, hero! 🌟</p>
+
           {/* Button to reset the form and start over */}
           <button className="button" onClick={startOver}>Start Over</button>
         </div>

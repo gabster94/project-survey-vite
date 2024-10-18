@@ -12,7 +12,7 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
     };
     return (
         <form className="form-strength">
-            Superhero Strength: What kind of strength would you like to have?
+            What’s a superhero without an epic superpower? 💥 It is your choice:
             <label className="label-strength">
                 <input
                     type="radio"

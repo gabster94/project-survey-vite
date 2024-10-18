@@ -15,13 +15,21 @@ code {
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 5px;
   background-color: #261b28;
+  width: 100%;
+  background-image: url(./assets/shooting-star-2024127_1280.png);
 }
 
 header {
   display: flex;
   flex-direction: column;
+  height: 30%;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+  padding: 10px;
 }
 
 h1 {
@@ -32,17 +40,40 @@ h2 {
   color: #fcffca;
 }
 
+h3 {
+  color: #fcffca;
+}
+
 p {
-  color: #50f0ff;
+  color: #fcffca;
 }
 
 .button {
-  background-color: #50f0ff;
+  background-color: #50bfff;
   padding: 3px;
   margin: 10px;
+  width: 40%;
+  height: 30px;
 }
 
 .button:hover {
   background-color: #fcffca;
   cursor: pointer;
+}
+
+.multistep-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  border: solid, #50bfff;
+  border-radius: 10px;
+  padding: 2%;
+  margin: 10px;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
