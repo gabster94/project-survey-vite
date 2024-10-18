@@ -91,7 +91,7 @@ export const MultiStepForm = () => {
   };
 
   return (
-    <div>
+    <div className="multistep-form-container">
       {formSubmitted ? (
         <h2>Thanks for Voting!</h2>
       ) : (
