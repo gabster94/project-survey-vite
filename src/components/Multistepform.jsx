@@ -102,11 +102,17 @@ export const MultiStepForm = () => {
 
       {/* Render the Name component on step 1 */}
       {currentStep === 1 && (
-        <Name value={formData.name} updateFormData={updateFormData} />
+        <Name 
+          value={formData.name} 
+          updateFormData={updateFormData} 
+        />
       )}
       {/* Render the Costume component on step 2 */}
       {currentStep === 2 && (
-        <Costume value={formData.costume} updateFormData={updateFormData} />
+        <Costume 
+          value={formData.costume} 
+          updateFormData={updateFormData} 
+        />
       )}
       {/* Render the radiobutton component on step 3 */}
       {currentStep === 3 && (
