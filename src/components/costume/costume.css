@@ -9,7 +9,8 @@
 }
 
 .costume-input {
-    margin: 20px;
+    margin: 20px auto;
     min-height: 30px;
-    max-width: 80%;
+    width: 80%;
+    display: block;
 }

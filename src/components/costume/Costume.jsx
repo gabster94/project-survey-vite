@@ -12,10 +12,8 @@ export const Costume = ({ value, updateFormData }) => {
         <div className="container-costume">
             <form className="form-container-costume">
                 <label className="label-costume">Every superhero needs the perfect outfit. What would your superhero costume be made of?</label>
-
                 <select className="costume-input" value={value} onChange={handleCostumeChange}>
-                    <option
-                    value="">Select costume:</option>
+                    <option value="">Select your costume:</option>
                     <option value="Glitter and Spandex">Glitter and spandex</option>
                     <option value="Rubber and Feathers">Rubber and feathers</option>
                     <option value="Cardboard and Duct Tape">Cardboard and duct tape</option>
