@@ -11,7 +11,6 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
         setStrength(selectedStrength)
         updateFormData("strength", selectedStrength) // Update parent state
     }
-
     return (
         <form className="form-strength">
             <fieldset>
@@ -59,9 +58,7 @@ export const SuperheroStrength = ({ updateFormData, value }) => {
 }
 
 // PropTypes validation
-
 SuperheroStrength.propTypes = {
     value: PropTypes.string.isRequired,
     updateFormData: PropTypes.func.isRequired,
 }
-

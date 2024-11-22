@@ -2,12 +2,10 @@ import PropTypes from "prop-types"
 import "./name.css"
 
 // function in which users can write their favourite superhero name
-
 export const Name = ({ value, updateFormData }) => {
   const handleNameChange = (e) => {
     updateFormData("name", e.target.value)
   }
-
   return (
     <>
       <div className="name-form-container">
@@ -31,7 +29,6 @@ export const Name = ({ value, updateFormData }) => {
     </>
   )
 }
-
 
 // props validation
 Name.propTypes = {

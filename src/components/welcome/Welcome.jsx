@@ -1,5 +1,4 @@
 export const Welcome = () => {
-
     return (
         <div className="welcome-container">
             <p>
