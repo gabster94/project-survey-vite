@@ -1,18 +1,18 @@
 .name-form-container {
-    display: flex;
-    flex-direction: column;
-    margin: 5px;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+  width: 100%;
 }
 
 .label-text-name {
-    color: aqua;
-    padding: 10px;
+  color: aqua;
+  padding: 10px;
 }
 
 .name-input {
-    margin: 20px auto;
-    min-height: 25px;
-    width: 80%;
-    display: block;
+  margin: 20px auto;
+  min-height: 25px;
+  width: 80%;
+  display: block;
 }

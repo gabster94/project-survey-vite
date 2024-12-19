@@ -1,16 +1,16 @@
 .form-container-costume {
-    display: flex;
-    flex-direction: column;
-    color: aqua;
+  display: flex;
+  flex-direction: column;
+  color: aqua;
 }
 
 .label-costume {
-    padding: 10px;
+  padding: 10px;
 }
 
 .costume-input {
-    margin: 20px auto;
-    min-height: 30px;
-    width: 80%;
-    display: block;
+  margin: 20px auto;
+  min-height: 30px;
+  width: 80%;
+  display: block;
 }

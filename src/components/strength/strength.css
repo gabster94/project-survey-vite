@@ -1,11 +1,10 @@
 .form-strength {
-    display: flex;
-    flex-direction: column;
-    color: aqua;
+  display: flex;
+  flex-direction: column;
+  color: aqua;
 }
 
 .label-strength {
-    color: aqua;
-    padding: 10px;
+  color: aqua;
+  padding: 10px;
 }
-
